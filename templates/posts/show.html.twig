@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show Post{% endblock %}
+
+{% block body %}
+    <div class="col-md-6">
+        <div class="card">
+            {% if(post.img) %}
+            <img class="card-img-top" src="{{ asset('uploads/posts/' ~ post.img) }}" style="width: 300px;height: 300px" alt="Post Img">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <p class="card-text">{{ post.body }}</p>
+                <a href="{{ path('post.index') }}" class="btn btn-danger">Back</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
