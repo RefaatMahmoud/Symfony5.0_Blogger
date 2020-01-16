@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome.min.css') }}">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
@@ -11,6 +12,8 @@
 <div class="container mt-5">
     {% block body %}{% endblock %}
 </div>
-{% block javascripts %}{% endblock %}
+{% block javascripts %}
+
+{% endblock %}
 </body>
 </html>
