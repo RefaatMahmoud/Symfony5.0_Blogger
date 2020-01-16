@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31ea039d-8cc0-4bed-9e25-a1d1d35e99ac" name="Default Changelist" comment="create FileUploader service">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/symfony_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony_blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/posts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +133,7 @@
       <updated>1578099667567</updated>
       <workItem from="1578099668798" duration="261000" />
       <workItem from="1578986844283" duration="800000" />
-      <workItem from="1579181444107" duration="85000" />
+      <workItem from="1579181444107" duration="866000" />
     </task>
     <servers />
   </component>
@@ -142,9 +141,17 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="509" y="24" width="891" height="986" key="CommitChangelistDialog2" timestamp="1579182352816">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="509" y="24" width="891" height="986" key="CommitChangelistDialog2/0.0.1920.1039@0.0.1920.1039" timestamp="1579182352816" />
     <state x="743" y="277" width="416" height="476" key="FileChooserDialogImpl" timestamp="1579181520829">
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
     <state x="743" y="277" width="416" height="476" key="FileChooserDialogImpl/0.0.1920.1039@0.0.1920.1039" timestamp="1579181520829" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1579181733260">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1039@0.0.1920.1039" timestamp="1579181733260" />
   </component>
 </project>
