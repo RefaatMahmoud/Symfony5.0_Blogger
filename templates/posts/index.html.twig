@@ -26,7 +26,7 @@
                     <td>{{ post.id }}</td>
                     <td><a href="{{ path('post.show',{id:post.id}) }}">{{ post.title }}</a></td>
                     <td>
-                        <a href="{{ path('post.delete',{id:post.id}) }}" class="text text-danger">
+                        <a href="{{ path('post.delete',{id:post.id}) }}" class="text text-danger delete-post">
                             <i class="fa fa-trash"></i>
                         </a>
                         <a href="{{ path('post.show',{id:post.id}) }}" class="text text-info ml-2">
@@ -44,3 +44,12 @@
     </div>
 {% endblock %}
 
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            $(document).on('click','.delete-post',function () {
+                window.confirm('Are you sure delete this post ?');
+            })
+        })
+    </script>
+{% endblock %}

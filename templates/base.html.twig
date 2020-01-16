@@ -12,8 +12,9 @@
 <div class="container mt-5">
     {% block body %}{% endblock %}
 </div>
-{% block javascripts %}
-
-{% endblock %}
+<script src="{{ asset('js/jquery-3.3.1.min.js') }}"></script>
+<script src="{{ asset('js/popper.min.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{% block javascripts %}{% endblock %}
 </body>
 </html>
