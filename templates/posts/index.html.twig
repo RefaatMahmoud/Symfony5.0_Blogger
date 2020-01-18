@@ -26,11 +26,15 @@
                     <td>{{ post.id }}</td>
                     <td><a href="{{ path('post.show',{id:post.id}) }}">{{ post.title }}</a></td>
                     <td>
-                        <a href="{{ path('post.delete',{id:post.id}) }}" class="text text-danger delete-post">
+                        <a url ="{{ path('post.delete',{id:post.id}) }}"
+                           class="text text-danger delete-post">
                             <i class="fa fa-trash"></i>
                         </a>
                         <a href="{{ path('post.show',{id:post.id}) }}" class="text text-info ml-2">
                             <i class="fa fa-eye"></i>
+                        </a>
+                        <a target="_blank" href="{{ path('post.print',{id:post.id}) }}" class="text text-info ml-2">
+                            <i class="fa fa-print"></i>
                         </a>
                     </td>
                 </tr>
@@ -47,8 +51,13 @@
 {% block javascripts %}
     <script>
         $(document).ready(function () {
-            $(document).on('click','.delete-post',function () {
-                window.confirm('Are you sure delete this post ?');
+            $(document).on('click', '.delete-post', function (e) {
+                e.preventDefault();
+                var redirect_url = $(this).attr('url');
+                var confirmed = window.confirm('Are you sure delete this post ?');
+                if (confirmed) {
+                    window.location = redirect_url;
+                }
             })
         })
     </script>

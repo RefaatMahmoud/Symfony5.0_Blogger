@@ -6,6 +6,10 @@ use App\Entity\Post;
 use App\Form\PostType;
 use App\Repository\PostRepository;
 use App\Service\FileUploader;
+use App\Service\PDF;
+use Dompdf\Dompdf;
+use Dompdf\Options;
+use Symfony\Bridge\Twig\Extension\AssetExtension;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -85,5 +89,16 @@ class PostController extends AbstractController
         $this->addFlash('success', 'Post Deleted Successfully');
         // return $this->redirect($this->generateUrl('post.index'));
         return $this->redirectToRoute('post.index');
+    }
+
+    /**
+     * @Route("/print/{id}", name="print")
+     */
+    public function print(Post $post, PDF $pdf)
+    {
+        $html = $this->renderView('posts/pdf.html.twig', [
+            'post' => $post
+        ]);
+        return $pdf->getPrint($html);
     }
 }

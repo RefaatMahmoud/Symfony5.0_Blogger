@@ -3,16 +3,20 @@
 {% block title %}Show Post{% endblock %}
 
 {% block body %}
-    <div class="col-md-6">
-        <div class="card">
-            {% if(post.img) %}
-            <img class="card-img-top" src="{{ asset('uploads/posts/' ~ post.img) }}" style="width: 300px;height: 300px" alt="Post Img">
-            {% endif %}
-            <div class="card-body">
-                <h5 class="card-title">{{ post.title }}</h5>
-                <p class="card-text">{{ post.body }}</p>
-                <a href="{{ path('post.index') }}" class="btn btn-danger">Back</a>
-            </div>
+    <div class="panel">
+        <div class="panel-heading">
+            {{ post.title }}
         </div>
+        <div class="panel-body">
+            {{ post.body }}
+        </div>
+        {% if(post.img) %}
+            <div class="panel-img">
+                <img class="card-img-top" src="{{ asset('/uploads/posts/' ~ post.img) }}" alt="Post Img">
+            </div>
+        {% endif %}
     </div>
+    <a href="{{ path('post.index') }}" class="btn btn-danger mt-3">Back</a>
+
+
 {% endblock %}
