@@ -192,14 +192,22 @@
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
     <state x="704" y="37" width="501" height="961" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1920.1039@0.0.1920.1039" timestamp="1579278761164" />
-    <state x="509" y="24" width="891" height="986" key="CommitChangelistDialog2" timestamp="1579182352816">
+    <state x="203" y="24" width="1197" height="986" key="CommitChangelistDialog2" timestamp="1579357956661">
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
-    <state x="509" y="24" width="891" height="986" key="CommitChangelistDialog2/0.0.1920.1039@0.0.1920.1039" timestamp="1579182352816" />
+    <state x="203" y="24" width="1197" height="986" key="CommitChangelistDialog2/0.0.1920.1039@0.0.1920.1039" timestamp="1579357956661" />
+    <state x="182" y="86" width="1536" height="857" key="DiffContextDialog" timestamp="1579357883271">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="182" y="86" width="1536" height="857" key="DiffContextDialog/0.0.1920.1039@0.0.1920.1039" timestamp="1579357883271" />
     <state x="743" y="277" width="416" height="472" key="FileChooserDialogImpl" timestamp="1579274830005">
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
     <state x="743" y="277" width="416" height="472" key="FileChooserDialogImpl/0.0.1920.1039@0.0.1920.1039" timestamp="1579274830005" />
+    <state x="555" y="237" width="800" height="561" key="Vcs.Push.Dialog.v2" timestamp="1579357958923">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="555" y="237" width="800" height="561" key="Vcs.Push.Dialog.v2/0.0.1920.1039@0.0.1920.1039" timestamp="1579357958923" />
     <state x="624" y="238" key="run.anything.popup" timestamp="1579183669569">
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
