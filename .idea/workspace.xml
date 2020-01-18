@@ -2,13 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="31ea039d-8cc0-4bed-9e25-a1d1d35e99ac" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/jquery-3.3.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Service/PDF.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/posts/pdf.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony_blog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony_blog.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PostType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/posts/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/posts/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/posts/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +27,13 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -94,6 +108,10 @@
       <path value="$PROJECT_DIR$/vendor/symfony/twig-bridge" />
       <path value="$PROJECT_DIR$/vendor/symfony/twig-pack" />
       <path value="$PROJECT_DIR$/vendor/symfony/doctrine-bridge" />
+      <path value="$PROJECT_DIR$/vendor/dompdf/dompdf" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-font-lib" />
+      <path value="$PROJECT_DIR$/vendor/sabberworm/php-css-parser" />
+      <path value="$PROJECT_DIR$/vendor/phenx/php-svg-lib" />
     </include_path>
   </component>
   <component name="ProjectId" id="1VuOlvJAW7x9tXzwmPBNvii71mN" />
@@ -111,7 +129,18 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../parent_assesment" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Service" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Service" />
+      <recent name="$PROJECT_DIR$/src/Service/PDF" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Service" />
+      <recent name="$PROJECT_DIR$/templates/posts" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -138,6 +167,9 @@
       <workItem from="1578099668798" duration="261000" />
       <workItem from="1578986844283" duration="800000" />
       <workItem from="1579181444107" duration="866000" />
+      <workItem from="1579271110524" duration="981000" />
+      <workItem from="1579272149042" duration="8061000" />
+      <workItem from="1579350412960" duration="2200000" />
     </task>
     <servers />
   </component>
@@ -148,17 +180,33 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="693" y="277" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1579278227821">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="693" y="277" width="524" height="480" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1039@0.0.1920.1039" timestamp="1579278227821" />
+    <state x="704" y="126" width="501" height="783" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0" timestamp="1579278942059">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="704" y="126" width="501" height="783" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method0/0.0.1920.1039@0.0.1920.1039" timestamp="1579278942059" />
+    <state x="704" y="37" width="501" height="961" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1" timestamp="1579278761164">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="704" y="37" width="501" height="961" key="#com.jetbrains.php.refactoring.extractMethod.PhpExtractMethodDialog#method1/0.0.1920.1039@0.0.1920.1039" timestamp="1579278761164" />
     <state x="509" y="24" width="891" height="986" key="CommitChangelistDialog2" timestamp="1579182352816">
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
     <state x="509" y="24" width="891" height="986" key="CommitChangelistDialog2/0.0.1920.1039@0.0.1920.1039" timestamp="1579182352816" />
-    <state x="743" y="277" width="416" height="476" key="FileChooserDialogImpl" timestamp="1579181520829">
+    <state x="743" y="277" width="416" height="472" key="FileChooserDialogImpl" timestamp="1579274830005">
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
-    <state x="743" y="277" width="416" height="476" key="FileChooserDialogImpl/0.0.1920.1039@0.0.1920.1039" timestamp="1579181520829" />
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1579181733260">
+    <state x="743" y="277" width="416" height="472" key="FileChooserDialogImpl/0.0.1920.1039@0.0.1920.1039" timestamp="1579274830005" />
+    <state x="624" y="238" key="run.anything.popup" timestamp="1579183669569">
       <screen x="0" y="0" width="1920" height="1039" />
     </state>
-    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1039@0.0.1920.1039" timestamp="1579181733260" />
+    <state x="624" y="238" key="run.anything.popup/0.0.1920.1039@0.0.1920.1039" timestamp="1579183669569" />
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1579278201609">
+      <screen x="0" y="0" width="1920" height="1039" />
+    </state>
+    <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1039@0.0.1920.1039" timestamp="1579278201609" />
   </component>
 </project>

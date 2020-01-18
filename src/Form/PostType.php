@@ -19,7 +19,7 @@ class PostType extends AbstractType
             ->add('title', TextType::class, [
                 'attr' => [
                     'autocomplete' => 'off',
-                    'class'        => 'col-md-6'
+                    'class'        => 'col-md-6',
                 ]
             ])
             ->add('body', TextareaType::class, [
@@ -29,6 +29,7 @@ class PostType extends AbstractType
                 ]
             ])
             ->add('img', FileType::class, [
+                'required'     => false,
                 'attr' => [
                     'autocomplete' => 'off',
                     'class'        => 'col-md-6'
