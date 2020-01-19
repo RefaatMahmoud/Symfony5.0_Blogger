@@ -19,6 +19,14 @@ class PostRepository extends ServiceEntityRepository
         parent::__construct($registry, Post::class);
     }
 
+    public function countPosts()
+    {
+        return $this->createQueryBuilder('p')
+                    ->select('count(p.id)')
+                    ->getQuery()
+                    ->getSingleScalarResult();
+    }
+
     // /**
     //  * @return Post[] Returns an array of Post objects
     //  */

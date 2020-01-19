@@ -36,8 +36,10 @@ class PostController extends AbstractController
     public function index()
     {
         $posts = $this->getDoctrine()->getRepository(Post::class)->findAll();
+        $posts_count = $this->getDoctrine()->getRepository(Post::class)->countPosts();
         return $this->render('posts/index.html.twig', [
-            'posts' => $posts
+            'posts'       => $posts,
+            'posts_count' => $posts_count
         ]);
     }
 
