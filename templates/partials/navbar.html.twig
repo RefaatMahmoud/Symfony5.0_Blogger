@@ -6,14 +6,26 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ path('users.index') }}">Users <span class="sr-only">(current)</span></a>
-            </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('users.show',{name:'refaat'}) }}">Show Profile</a>
+                <a class="nav-link" href="{{ path('users.show',{name:'refaat'}) }}">Profile</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ path('post.index') }}">Posts</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Post
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ path('post.create') }}">create</a>
+                    <a class="dropdown-item" href="{{ path('post.index') }}">list</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Category
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{{ path('category.create') }}">create</a>
+                    <a class="dropdown-item" href="{{ path('category.index') }}">list</a>
+                </div>
             </li>
         </ul>
     </div>
