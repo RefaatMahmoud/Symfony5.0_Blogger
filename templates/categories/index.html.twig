@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}categories{% endblock %}
+
+{% block body %}
+    <div class="col-md-12">
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="col-md-12">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for category in categories %}
+                <tr>
+                    <td>{{ category.id }}</td>
+                    <td>{{ category.title }}</td>
+                    <td>
+                        <a url ="{{ path('category.delete',{id:category.id}) }}" style="cursor: pointer"
+                           class="text text-danger delete-category">
+                            <i class="fa fa-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-6">
+        <a href="{{ path('category.create') }}" class="btn btn-primary" style="color: #FFF">Add Category</a>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function () {
+            $(document).on('click', '.delete-category', function (e) {
+                e.preventDefault();
+                var redirect_url = $(this).attr('url');
+                var confirmed = window.confirm('Are you sure delete this category ?');
+                if (confirmed) {
+                    window.location = redirect_url;
+                }
+            })
+        })
+    </script>
+{% endblock %}
