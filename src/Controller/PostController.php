@@ -4,13 +4,11 @@ namespace App\Controller;
 
 use App\Entity\Post;
 use App\Form\PostType;
-use App\Repository\PostRepository;
 use App\Service\FileUploader;
 use App\Service\PDF;
-use Dompdf\Dompdf;
-use Dompdf\Options;
 use Symfony\Bridge\Twig\Extension\AssetExtension;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -49,18 +47,10 @@ class PostController extends AbstractController
     public function create(Request $request)
     {
         $post = new Post();
-
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
-            $file = $form['img']->getData();
-            if ($file) {
-                $file_name = $this->file_uploader->upload($file);
-                $post->setImg($file_name);
-            }
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($post);
-            $em->flush();
+            $this->submitPostForm($post, $form);
             $this->addFlash('success', 'Post Added Successfully');
             return $this->redirect($this->generateUrl('post.index'));
         }
@@ -77,6 +67,23 @@ class PostController extends AbstractController
     {
         return $this->render('posts/show.html.twig', [
             'post' => $post
+        ]);
+    }
+
+    /**
+     * @Route("/edit/{id}", name="edit")
+     */
+    public function edit(Request $request, Post $post)
+    {
+        $form = $this->createForm(PostType::class, $post);
+        $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            $this->submitPostForm($post, $form);
+            $this->addFlash('success', 'Post Updated Successfully');
+            return $this->redirect($this->generateUrl('post.index'));
+        }
+        return $this->render('posts/edit.html.twig', [
+            'form' => $form->createView()
         ]);
     }
 
@@ -102,5 +109,17 @@ class PostController extends AbstractController
             'post' => $post
         ]);
         return $pdf->getPrint($html);
+    }
+
+    private function submitPostForm(Post $post, FormInterface $form): void
+    {
+        $file = $form['img']->getData();
+        if ($file) {
+            $file_name = $this->file_uploader->upload($file);
+            $post->setImg($file_name);
+        }
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($post);
+        $em->flush();
     }
 }

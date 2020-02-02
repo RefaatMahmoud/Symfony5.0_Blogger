@@ -15,6 +15,9 @@
                 <img class="card-img-top" src="{{ asset('/uploads/posts/' ~ post.img) }}" alt="Post Img">
             </div>
         {% endif %}
+        <div class="col-md-12 p-2">
+            <span class="badge badge-success">{{ post.category.title }}</span>
+        </div>
     </div>
     <a href="{{ path('post.index') }}" class="btn btn-danger mt-3">Back</a>
 
