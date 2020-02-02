@@ -2,8 +2,11 @@
 
 namespace App\Form;
 
+use App\Entity\Category;
 use App\Entity\Post;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
@@ -17,23 +20,32 @@ class PostType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [
-                'attr' => [
+                'label' => 'Title',
+                'attr'  => [
                     'autocomplete' => 'off',
                     'class'        => 'col-md-6',
                 ]
             ])
             ->add('body', TextareaType::class, [
-                'attr' => [
+                'label' => 'Body',
+                'attr'  => [
                     'autocomplete' => 'off',
                     'class'        => 'col-md-6'
                 ]
             ])
             ->add('img', FileType::class, [
-                'required'     => false,
-                'attr' => [
+                'data_class' => null,
+                'required'   => false,
+                'label'      => 'Image',
+                'attr'       => [
                     'autocomplete' => 'off',
                     'class'        => 'col-md-6'
                 ]
+            ])
+            ->add('category', EntityType::class, [
+                'class'        => Category::class,
+                'placeholder'  => 'Choose an category',
+                'choice_label' => 'title'
             ])
             ->add('save', SubmitType::class, [
                 'attr' => [

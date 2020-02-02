@@ -17,6 +17,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Title</th>
+                <th scope="col">Category</th>
                 <th scope="col">Action</th>
             </tr>
             </thead>
@@ -25,6 +26,7 @@
                 <tr>
                     <td>{{ post.id }}</td>
                     <td><a href="{{ path('post.show',{id:post.id}) }}">{{ post.title }}</a></td>
+                    <td>{{ post.category.title }}</td>
                     <td>
                         <a url ="{{ path('post.delete',{id:post.id}) }}"
                            class="text text-danger delete-post">
@@ -32,6 +34,9 @@
                         </a>
                         <a href="{{ path('post.show',{id:post.id}) }}" class="text text-info ml-2">
                             <i class="fa fa-eye"></i>
+                        </a>
+                        <a href="{{ path('post.edit',{id:post.id}) }}" class="text text-info ml-2">
+                            <i class="fa fa-pencil-alt"></i>
                         </a>
                         <a target="_blank" href="{{ path('post.print',{id:post.id}) }}" class="text text-info ml-2">
                             <i class="fa fa-print"></i>
